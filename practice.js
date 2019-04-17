@@ -346,7 +346,7 @@ var colt = {
 
 //Code Here
 
-
+devMountainEmployees.push(joe, cahlan, ryan, colt);
 
 /*
   Now let's say Cahlan has to take a leave of absence.
@@ -355,7 +355,11 @@ var colt = {
 
 //Code Here
 
-
+for (var i = 0; i < devMountainEmployees.length; i++) {
+  if (devMountainEmployees[i].name === "Cahlan") {
+    devMountainEmployees.splice(i, 1);
+  }
+}
 
 ////////// PROBLEM 13 //////////
 
@@ -367,7 +371,7 @@ var colt = {
 
 //Code Here
 
-
+var users = [];
 
 /*
   Now add three user objects to your users array. Each user object should contain the following properties. name, email, password, username.
@@ -386,7 +390,18 @@ var user1 = {
 
 //Code Here
 
+users.push(user1);
 
+var user2 = {
+  name: "John Doe",
+  email: "john.doe@devmounta.in",
+  password: "password",
+  username: "iWriteCode"
+}
+
+for (var i = 0; i < 2; i++) {
+  users.push(user2);
+}
 
 /*
   Now you have a very common data structure. 
@@ -400,7 +415,11 @@ var user1 = {
 
 //Code Here
 
-
+for (var i = 0; i < users.length; i++) {
+  if (users[i].name === "Mark") {
+    users.splice(i, 1);
+  }
+}
 
 /*
   The activity we just did is very much how data works in 'the real world'.
