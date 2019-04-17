@@ -105,11 +105,6 @@ function evenFinder(nums) {
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
 
 
-
-
-
-
-
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
@@ -124,7 +119,23 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 //Code Here
 
+function divider(numbersArray) {
+  var evenArr = [];
+  var oddArr = [];
+  var output = [];
 
+  for (var i = 0; i < numbersArray.length; i++) {
+    if (numbersArray[i] % 2 === 0) {
+      evenArr.push(numbersArray[i]);
+    } else {
+      oddArr.push(numbersArray[i]);
+    }
+  }
+
+  output.push(evenArr, oddArr);
+
+  return output;
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -146,7 +157,17 @@ var getRandomArbitrary = function() {
 
 //Code Here
 
+function finder(array) {
+  var randomNumber = getRandomArbitrary();
 
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === randomNumber) {
+      return true;
+    }
+  }
+
+  return false;
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -175,7 +196,25 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
+function removeItem(myGroceryList, item) {
+  if (!myGroceryList || !item) {
+    return [];
+  }
+  for (var i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] === item) {
+      myGroceryList.splice(i, 1);
+    }
+  }
+  return myGroceryList;
+}
 
+function addItem(myGroceryList, item) {
+  if (!myGroceryList || !item) {
+    return [];
+  }
+  myGroceryList.push(item);
+  return myGroceryList;
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -185,7 +224,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
-
+function maker() {
+  var array = [];
+  for (var i = 1; i <= 215; i++) {
+    array.push(i);
+  }
+  return array;
+}
 
 ////////// PROBLEM 10 //////////
 
@@ -201,7 +246,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 
-
+function addTen(numbers) {
+  var newArr = [];
+  for (var i = 0; i < numbers.length; i++) {
+    var num = Number(numbers[i]);
+    newArr.push(num + 10);
+  }
+  return newArr;
+}
 
 ////////// PROBLEM 11 //////////
 
@@ -226,7 +278,13 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function longer(arr1, arr2) {
+  if (arr1.length > arr2.length) {
+    return arr1;
+  } else {
+    return arr2;
+  }
+}
 
 /*
   As a continuation of the previous problem, write another function called 'both'.
@@ -238,7 +296,17 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function both(arr1, arr2) {
+  var output = [];
+  for(var i = 0; i < arr1.length; i++) {
+    for(var j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        output.push(arr1[i]);
+      }
+    }
+  }
+  return output;
+}
 
 ////////// PROBLEM 12 //////////
 
